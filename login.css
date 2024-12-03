@@ -1,0 +1,130 @@
+/* Reset some default styles */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define a background color for the body */
+body {
+  background-color: #f0f0f0;
+  font-family: 'Bitter', serif;
+  color: #333;
+  text-align: center;
+}
+
+/* Style the wrapper and announcement */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.announcement {
+  color: #999;
+  margin-bottom: 20px;
+}
+
+/* Style the card group and animation */
+.card-group {
+  position: relative;
+  perspective: 2000px;
+  width: 300px;
+  margin: 0 auto;
+  transition: transform 0.5s;
+}
+
+/* Style the individual card */
+.card {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+  text-align: center;
+}
+
+.card.active {
+  display: block;
+}
+
+/* Style the title and horizontal rule */
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+/* Style the disclaimer and input fields */
+.disclaimer {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #777;
+  pointer-events: none;
+  transition: transform 0.3s, font-size 0.3s, color 0.3s;
+}
+
+/* Style the buttons */
+.btn-default {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-default:hover {
+  background-color: #258cd1;
+}
+
+/* Style the card footer */
+.card-footer {
+  margin-top: 20px;
+}
+
+.btn-invert {
+  background-color: transparent;
+  border: 1px solid #3498db;
+  color: #3498db;
+}
+
+.btn-invert:hover {
+  background-color: #3498db;
+  color: #fff;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results</title>
+  <!-- Include any necessary CSS and JavaScript libraries here -->
+</head>
+<body>
+  <h1>Search Results</h1>
+
+  <!-- Search form -->
+  <form id="search-form" action="search.html" method="GET">
+    <!-- Replace the input field with this -->
+    <input class="search" type="text" name="query" id="search-input" placeholder="Search...">
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="search-results" class="card-group"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+  <script>
+        var firebaseConfig = {
+  apiKey: "AIzaSyCme0h9jCxSQzAkeoYdV7Csl8rqQuGorH8",
+  authDomain: "rewiews-737d5.firebaseapp.com",
+  databaseURL: "https://rewiews-737d5-default-rtdb.firebaseio.com",
+  projectId: "rewiews-737d5",
+  storageBucket: "rewiews-737d5.appspot.com",
+  messagingSenderId: "887594559229",
+  appId: "1:887594559229:web:9db205865786f493f88094",
+  measurementId: "G-0EQKTQSH2P"
+};
+
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Reference to the Firebase database
+    var database = firebase.database();
+
+    // Get the search query from the URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('query');
+
+    // Set the value of the search input field if a query parameter is present
+    if (searchQuery) {
+      document.getElementById('search-input').value = searchQuery;
+    }
+
+    // Fetch and display search results based on the query
+    if (searchQuery) {
+      fetchSearchResults(searchQuery);
+    } else {
+      document.getElementById('search-results').textContent = 'No search query provided.';
+    }
+
+    function fetchSearchResults(query) {
+      var searchResultsContainer = document.getElementById('search-results');
+
+      // Reference to the "reviews" node in the database
+      var reviewsRef = database.ref('reviews');
+
+      // Query to fetch reviews matching the "title" field
+      reviewsRef.orderByChild('title') // Assuming 'title' is the field to search on
+        .equalTo(query) // Match the search query
+        .once('value', function(snapshot) {
+          snapshot.forEach(function(childSnapshot) {
+            var reviewData = childSnapshot.val();
+
+            // Create a card to display the review
+            var card = document.createElement('div');
+            card.classList.add('card');
+
+            // Create a card content div
+            var cardContent = document.createElement('div');
+            cardContent.classList.add('card-content');
+
+            // Create elements for review data
+            var cardTitle = document.createElement('div');
+            cardTitle.classList.add('card-title');
+            cardTitle.textContent = "Title: " + reviewData.title;
+
+            // Add other fields you want to display (description, category, etc.)
+
+            cardContent.appendChild(cardTitle);
+            // Add other fields to cardContent
+
+            card.appendChild(cardContent);
+
+            searchResultsContainer.appendChild(card);
+          });
+        });
+    }
+  </script>
+</body>
+</html>

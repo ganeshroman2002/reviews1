@@ -1,0 +1,738 @@
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+
+
+.landing-page .content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 80px);
+}
+@media (max-width: 767px) {
+  .landing-page .content .container {
+    gap: 0;
+    min-height: calc(100vh - 101px);
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767px) {
+  .landing-page .content .info {
+    text-align: center;
+    margin-bottom: 15px 
+  }
+}
+.landing-page .content .info h1 {
+  color: #5d5d5d;
+  font-size: 44px;
+}
+.landing-page .content .info p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #5d5d5d;
+}
+.landing-page .content .info button {
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 14px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #6c63ff;
+}
+.landing-page .content .image img {
+  max-width: 100%;
+}
+/* End Landing Page */
+
+
+
+.search{
+    width: 400px;
+    border-radius: 40px;
+    border: none;
+    padding: 12px 14px;
+    margin: 4px;
+}
+
+
+
+
+
+
+
+
+/* CSS for the company containers */
+.company-container {
+    flex: 0 0 auto; /* Prevent companies from growing or shrinking */
+    display: inline-flex; /* Display company containers as inline-flex to place them in a row */
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    align-items: center; /* Vertically align content */
+    margin: 10px;
+    width: 200px;
+    cursor: pointer; /* Optional: Add a pointer cursor for clickable companies */
+    transition: background-color 0.3s; /* Optional: Add a smooth background color transition on hover */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    white-space: nowrap;
+}
+
+.company-container img {
+    max-height: 40px;
+    margin-right: 10px;
+/*    border-radius: 50%; /* Display the company logo in a circular shape */*/
+}
+
+.company-info {
+    flex: 1; /* Allow company info to expand and fill available space */
+
+}
+
+/* CSS for company headings */
+.company-heading {
+    display: none;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Optional: Style the company containers on hover */
+.company-container:hover {
+    background-color: #f1f1f1;
+}
+
+/* Keyframes for the scroll animation */
+
+
+@media screen and (max-width: 800px) {
+  #company-container {
+    display: flex;
+    overflow-x: auto; /* Remove horizontal scrolling on screens narrower than 400px */
+  } 
+}
+
+/* Default button styles */
+.container1btn {
+    background-color: transparent;
+    border: 2px solid white; /* White border */
+    color: #3498db;
+    border: 1px solid #000;
+    padding: 10px 60px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: border-color 0.3s; /* Smooth transition for border color */
+    margin: 0 auto 30px; /* Add margin to the buttons (centered horizontally) and space below */
+    display: block; /* Ensure the buttons are displayed as blocks */
+}
+
+/* Container for buttons and information */
+
+
+
+/* Media queries and other styles remain unchanged */
+
+@media screen and (max-width: 768px) {
+    /* Adjust button styles for smaller screens */
+    .container1btn {
+        font-size: 14px; /* Reduce font size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+}
+@media screen and (max-width: 480px) {
+    /* Further adjust button styles for even smaller screens */
+    .container1btn {
+        font-size: 12px; /* Reduce font size */
+        padding: 6px 12px; /* Adjust padding */
+    }
+}
+
+.container1btn:hover {
+    border-color: #3498db; /* Change border color on hover */
+        text-decoration: none;
+
+}
+
+
+        /* Container styles */
+        .container1 {
+            width: 50%; /* Set the width for each container */
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            vertical-align: top; /* Align containers to the top in each row */
+        }
+
+        /* Adjust styles for larger screens */
+        @media (min-width: 768px) {
+            .container1 {
+                width: 45%; /* You can adjust the width as needed */
+            }
+            
+        }
+
+
+
+.bcontainer1 {
+    display: flex;
+    width: 100%;
+        align-items: center; /* Center align content horizontally */
+    text-align: center; /* Center align text horizontally */
+
+}
+
+.small-container {
+    flex: 1; /* Make it flexible to take available space */
+    background-color: #f1f1f1; /* Example background color */
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+        margin: 40px;
+}
+
+.large-container {
+    flex: 2; /* Make it twice as wide as the small container */
+    background-color: #f1f1f1; /* Example background color */
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+
+}
+
+/* Adjust styles for smaller screens if needed */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack containers on smaller screens */
+    }
+
+    .small-container,
+    .large-container {
+        flex: 1; /* Equal width on smaller screens */
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+
+
+
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1e8;
+    padding: 10px;
+    align-items: center; /* Center the content horizontally */
+}
+
+.explore-link {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: center; /* Center the images horizontally */
+}
+
+.image-row img {
+    max-width: 100px;
+    height: auto;
+    margin: 5px; /* Add some margin around the images */
+}
+
+.image-row::-webkit-scrollbar {
+    display: none;
+}
+
+.image-row img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.api-integration {
+  margin: 0 auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.integration-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.integration-step {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.step-card h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Hover effect for steps */
+.integration-step:hover {
+    transform: scale(1.02);
+}
+
+
+.pricing-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-card {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.plan-description {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.price-details {
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.billing-details {
+    font-size: 14px;
+}
+
+.book-demo-button {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Hide overflowed features by default */
+.features {
+    display: none; /* Initially hide the features list */
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Show all features when the 'show-all-features' class is applied */
+.show-all-features {
+    max-height: none;
+}
+
+
+.features li {
+    margin-top: 5px;
+}
+/* Add styles for the "View All Features" button */
+.view-features-button {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Style the button on hover */
+.view-features-button:hover {
+    background-color: #534bd1;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+    .pricing-card {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
+
+.pricing-calculation {
+    background-color: #f1f1e8;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-calculation h2 {
+    max-width: 800px;
+
+    font-size: 24px;
+      margin: 0 auto;
+
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.pricing-calculation p {
+      max-width: 800px;
+
+    font-size: 16px;
+          margin: 0 auto;
+
+    color: #666;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+/* Style for the FAQ section container */
+.faq-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for FAQ items */
+.faq-item {
+  margin-bottom: 20px;
+}
+
+/* Your existing CSS for styling */
+
+/* Hide answer paragraphs by default */
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+}
+
+
+/* Style for FAQ question headings */
+.faq-item h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Style for FAQ answer paragraphs */
+.faq-item p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Change the color of question headings on hover */
+.faq-item:hover h3 {
+  color: #6c63ff;
+}
+
+
+
+
+
+
+
+
+.categories {
+  display: flex; /* Use flexbox to create a horizontal layout */
+  overflow-x: auto; /* Add horizontal scrolling for overflow */
+  background-color: #f1f1e8;
+  max-height: 400px;
+}
+.categories {
+  position: relative; /* Create a positioning context */
+  margin-top: 100px;
+}
+#categoryList{
+  overflow-x: auto; /* Add horizontal scrolling for overflow */
+  background-color: #f1f1e8;
+  max-height: 400px;
+}
+@media screen and (max-width: 800px) {
+  #categoryList {
+    display: flex;
+    overflow-x: auto; /* Remove horizontal scrolling on screens narrower than 400px */
+  }
+}
+.explore-view-all {
+  position: absolute; /* Position the links */
+  top: 0; /* Position links at the top */
+  left: 0; /* Align "Explore" link to the left */
+  right: 0; /* Align "View All" link to the right */
+  text-align: center; /* Center the links horizontally */
+}
+
+.explore-link {
+  float: left; /* Float the "Explore" link to the left */
+}
+
+.view-all-link {
+  float: right; /* Float the "View All" link to the right */
+    border: 0;
+  border-radius: 20px;
+  padding: 12px 14px;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #6c63ff;
+}
+
+.category-container {
+  flex: 0 0 auto; /* Prevent categories from growing or shrinking */
+  display: inline-flex; /* Display category containers as inline-flex to place them in a row */
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  align-items: center; /* Vertically align content */
+  margin: 10px;
+  width: 200px;
+}
+
+.category-container img {
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 10px;
+}
+
+.category-info {
+  flex: 1; /* Allow category info to expand and fill available space */
+}
+
+/* CSS for category headings */
+.category-heading {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* CSS for the recent reviews container */
+#recentReviewsContainer {
+  display: flex; /* Use flexbox to create a horizontal layout */
+  background-color: #f1f1e8;
+  max-height: 400px;
+  overflow-x: scroll; /* Add horizontal scrolling for overflow */
+  white-space: nowrap;
+  position: relative; /* Create a positioning context */
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+}
+
+/* Hide scrollbar thumb */
+#recentReviewsContainer::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+/* Media query to remove horizontal scrolling on screens wider than 800px */
+@media screen and (min-width: 801px) {
+  #recentReviewsContainer {
+    overflow-x: hidden; /* Remove horizontal scrolling on screens wider than 800px */
+  }
+}
+
+/* Add animation for auto-scrolling */
+.auto-scroll {
+  animation: scroll-left 30s linear infinite; /* Adjust the duration (15s) as needed */
+}
+
+/* Keyframes for the scroll animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0); /* Start from the initial position */
+    }
+    100% {
+        transform: translateX(-100%); /* Scroll to the left */
+    }
+}
+
+/* CSS to make text appear in front of the scrollable container */
+.recentReviews {
+  position: relative; /* Create a positioning context */
+  z-index: 1; /* Set a higher z-index to appear in front of the scrollable container */
+  background-color: #f1f1e8;
+  max-height: 400px;
+  margin-top: 100px;
+}
+
+/* CSS to hide scrollbar and stop scrolling on hover */
+#recentReviewsContainer:hover {
+  overflow-x: hidden;
+}
+
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Remove margin on the right side */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: calc(50% - 20px); /* Adjust card width to fit two cards side by side */
+    cursor: pointer;
+    transition: transform 0.2s;
+    max-width: 200px;
+}
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #555;
+}
+
+.card-category,
+.card-company {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.card-rating {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.card-link {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.card-link:hover {
+    color: #0056b3;
+}
+
+.card-image {
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 50%;
+    height: auto;
+    margin-right: 20px;
+    flex-shrink: 0;
+    top: 1;
+    float: left;
+}
+
+.star {
+    font-size: 18px;
+    color: #f7c800;
+}
+
+.star.active {
+    color: #ff9a00;
+}
+/* Initially hide the full description */
+.full-description {
+  display: none;
+}
+
+/* Style for the "Read More" link */
+.read-more-link {
+  color: #007BFF;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Style for the "Read Less" link (hidden by default) */
+.read-less-link {
+  display: none;
+  color: #007BFF;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+

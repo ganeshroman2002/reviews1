@@ -1,0 +1,86 @@
+/* reviews.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Flexbox container for cards */
+#reviewsList {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line when needed */
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Remove margin on the right side */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: calc(50% - 20px); /* Adjust card width to fit two cards side by side */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #555;
+}
+
+.card-category,
+.card-company {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.card-rating {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.card-link {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.card-link:hover {
+    color: #0056b3;
+}
+
+.card-image {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.star {
+    font-size: 18px;
+    color: #f7c800;
+}
+
+.star.active {
+    color: #ff9a00;
+}

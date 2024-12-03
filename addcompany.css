@@ -1,0 +1,144 @@
+/* Styles for the company registration form */
+/* Styles for the company form */
+/* Styles for the company card */
+/* Styles for the company card */
+.company-card {
+  margin: 20px auto; /* Adjust margin for spacing */
+  border: 2px solid #6c63ff; /* Border color for the card */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for depth */
+}
+
+.left-section {
+  flex: 1;
+  max-width: 40%;
+  margin-right: 20px;
+}
+
+.right-section {
+  flex: 1;
+  max-width: 55%;
+}
+
+/* Styles for the company form elements */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px; /* Adjust font size for readability */
+}
+
+/* Styles for the company card button */
+button[type="submit"] {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px; /* Increase padding for larger button */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px; /* Increase font size for emphasis */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+button[type="submit"]:hover {
+  background-color: #554fd8;
+}
+
+/* Optional: Add a separate style for the button when disabled */
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+  
+.company-container {
+    flex: 0 0 auto; /* Prevent companies from growing or shrinking */
+    display: inline-flex; /* Display company containers as inline-flex to place them in a row */
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    align-items: center; /* Vertically align content */
+    margin: 10px;
+    width: 200px;
+    cursor: pointer; /* Optional: Add a pointer cursor for clickable companies */
+    transition: background-color 0.3s; /* Optional: Add a smooth background color transition on hover */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    white-space: nowrap;
+}
+
+.company-container img {
+    width: 100%;
+    max-height: 40px;
+    margin-right: 10px;
+/*    border-radius: 50%; /* Display the company logo in a circular shape */*/
+}
+
+.company-info {
+    flex: 1; /* Allow company info to expand and fill available space */
+
+}
+
+/* CSS for company headings */
+.company-heading {
+    display: none;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Optional: Style the company containers on hover */
+.company-container:hover {
+    background-color: #f1f1f1;
+}
+
+/* Keyframes for the scroll animation */
+
+
+@media screen and (max-width: 800px) {
+  #company-container {
+    display: flex;
+    overflow-x: auto; /* Remove horizontal scrolling on screens narrower than 400px */
+  } 
+}
+
+/* Payment Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Background overlay color with transparency */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}

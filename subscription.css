@@ -1,0 +1,202 @@
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for the login and registration forms */
+#login-page {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container1 {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 45%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Styles for the subscription cards */
+#subscription-page {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.subscription-card {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.subscription-card h2 {
+    font-size: 24px;
+}
+
+.subscription-card p {
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6c63ff;
+    margin-top: 10px;
+}
+
+button#subscribe-basic,
+button#subscribe-premium,
+button#logout-button,
+button#switch-button {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Styling for the logout button */
+button#logout-button {
+    background-color: #ff6347;
+}
+.pricing-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-card {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.plan-description {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.price-details {
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.billing-details {
+    font-size: 14px;
+}
+
+.book-demo-button {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Hide overflowed features by default */
+.features {
+    display: none; /* Initially hide the features list */
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Show all features when the 'show-all-features' class is applied */
+.show-all-features {
+    max-height: none;
+}
+
+
+.features li {
+    margin-top: 5px;
+}
+/* Add styles for the "View All Features" button */
+.view-features-button {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Style the button on hover */
+.view-features-button:hover {
+    background-color: #534bd1;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+    .pricing-card {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
